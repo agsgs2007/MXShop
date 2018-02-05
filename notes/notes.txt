@@ -1,0 +1,65 @@
+2018.2.3
+1、建立虚拟环境，版本django1.10;
+
+2、建立好虚拟环境后，使用pycharm进入该环境；
+
+3、包含内容
+$ pip list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+Django (1.11)
+django-filter (1.1.0)
+djangorestframework (3.6.0)
+Markdown (2.6.11)
+mysqlclient (1.3.12)
+pip (9.0.1)
+pytz (2017.3)
+setuptools (38.4.0)
+wheel (0.30.0)
+(VueShop)
+
+4、虚拟环境作为单独的文件夹，项目作为单独的文件夹；
+
+5、项目建成后，更改数据库设定参数，安装mysqlclient模块，测试项目是否成功;
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "vue_shop",
+        'USER': 'root',
+        'PASSWORD': "314797",
+        'HOST': "127.0.0.1",
+        'OPTIONS': {'init_command': 'SET storage_engine=INNODB;'}
+    }
+}
+
+
+6、在项目目录下增加几个package和目录；
+
+7、在setting中增加导入路径代码；
+import sys
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
+
+8、将项目上传到github
+1）参考博文
+https://www.cnblogs.com/feixuelove1009/p/5955332.html
+在Pycharm中使用GitHub
+2）在pycharm中配置github和git，然后上传项目，注意数据库没有上传
+
+9、非常好的一个博客
+http://www.liujiangblog.com/course/django/85
+刘江的博客及教程
+
+
+
+2018.2.5
+1、在宿舍的电脑上配置以上环境，并将项目下载到本地；
+
+2、调试的时候碰到了问题，对pycharm调试不熟，参考下面的网址配置成功
+https://www.cnblogs.com/yhleng/p/7837891.html
+
+3、使用win10自带的截图工具截图
+
+4、本机已经安装了mysql，密码是123456，删除了github的原资源；
